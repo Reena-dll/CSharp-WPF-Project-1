@@ -1,0 +1,6 @@
+Yönetici girişi için 
+
+admin
+password
+
+Yönetim paneli ve kullanıcı paneli farklı sayfalardır.

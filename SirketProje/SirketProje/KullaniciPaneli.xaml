@@ -1,0 +1,56 @@
+﻿<Window x:Class="SirketProje.KullaniciPaneli"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SirketProje"
+        mc:Ignorable="d"
+        Title="KullaniciPaneli" Height="535.5" Width="366.5"
+        Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        >
+    <Grid Grid.Column="1" Background="#00000D" Margin="0,0,2,2">
+        <Image Height="150" VerticalAlignment="Top" Source="Assets/back.jpg" Stretch="UniformToFill"/>
+        <Ellipse Height="100" Width="100" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="20 100" Stroke="White">
+            <Ellipse.Fill>
+                <ImageBrush x:Name="image1" ImageSource="{Binding}" Stretch="UniformToFill"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBlock x:Name="textAd" Foreground="White" FontSize="20" FontFamily="Nirmala UI Semilight" Margin="10,100,120,0" VerticalAlignment="Top"/>
+        <StackPanel Margin="0,150,0,10">
+            <Grid Height="60" Margin="20,50,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65*"/>
+                    <ColumnDefinition Width="116*"/>
+                    <ColumnDefinition Width="115"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="MAAŞ" VerticalAlignment="Bottom" Foreground="#FFFBFBFB" Margin="5,0,5,5" Height="16"/>
+                <TextBlock x:Name="textMaas" Text="---K" VerticalAlignment="Top" Foreground="#FFFBFBFB" Grid.Row="1" Margin="5,0,15,0" Height="16"/>
+
+                <TextBlock Text="DEPARTMAN" VerticalAlignment="Bottom" Foreground="#FFFBFBFB" Margin="5,0,5,5" Grid.Column="1" Height="16"/>
+                <TextBlock x:Name="textDepartman" Text="---" VerticalAlignment="Top" Foreground="#FFFBFBFB" Grid.Row="1" Margin="10 0" Grid.Column="1" Height="16"/>
+
+
+                <TextBlock Text="Şube" VerticalAlignment="Bottom" Foreground="#FFFBFBFB" Margin="5,0,5,5" Grid.Column="2" Height="16"/>
+                <TextBlock x:Name="textSube" VerticalAlignment="Top" Foreground="#FFFBFBFB" Grid.Row="1" Margin="5,0" Grid.Column="2" Height="16"/>
+            </Grid>
+
+            <TextBlock x:Name="textHakkinda" TextWrapping="Wrap" Margin="20,20,10,20" Foreground="#FFFBFBFB" FontSize="14" Height="167"></TextBlock>
+
+            <StackPanel HorizontalAlignment="Left">
+                <Button x:Name="btnGeri" Width="40" Height="40" FontSize="30" Content="←" Margin="15,0,0,0" Click="Geri_Click"/>
+            </StackPanel>
+
+
+        </StackPanel>
+    </Grid>
+</Window>
